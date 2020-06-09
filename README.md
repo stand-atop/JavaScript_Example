@@ -1,2 +1,2 @@
 # JavaScript_Practice
-JavaScript&amp;JQuery_Doit
+JavaScript&amp;jQuery_Doit - www.easyspub.com
