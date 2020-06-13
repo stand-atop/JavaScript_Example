@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수(Function)</title>
+    <script>
+        //매개변수가 없는 함수
+        function greeting(){
+           document.write("hello", "<br>") ;
+           document.write("welcome", "<br>");
+        }
+        greeting();
+        greeting();
+
+        //매개변수가 있는 함수
+        function greeting(name, area){
+            document.write("hello " + name, "<br>");
+            document.write("welcom to " + area, "<br>");
+        }
+        greeting("크롱", "뽀로로월드");
+        greeting("뽀로로", "크롱월드");
+
+        /*
+        //지역변수와 전역변수의 이용 - 지역변수가 호출되지 않는 경우
+        var num = 500; //전역변수
+        function funcTest(){
+            var num = 200; //지역변수
+            document.write();
+        }
+        funcTest(); //출력 데이터X
+        document.write(num); // 500출력
+        */
+
+        /*
+        //지역변수와 전역변수의 이용 - 지역변수가 호출되는 경우
+        var num = 500; //전역변수
+        function funcTest(){
+            var num = 200; //지역변수
+            document.write(num);
+        }
+        funcTest(); //200출력
+        document.write(num, "<br>"); // 500출력
+        */
+
+        //외부함수와 내부함수
+        /*
+        var num = 500; //전역변수
+        function outFnc(){ //외부함수
+            var num = 200; //지역변수
+            function innerFnc(){ //내부함수
+                document.write(num, "<br>");                
+            } 
+        }
+        outFnc(); //외부함수 호출
+        innerFnc(); //내부함수 호출 X
+        document.write(num); // 500출력
+        */
+        var num = 500; //전역변수
+        function outFnc(){ //외부함수
+            var num = 200; //지역변수
+            function innerFnc(){ //내부함수
+                document.write(num, "<br>");                
+            } 
+            innerFnc(); //내부함수 호출
+        }
+        outFnc(); //outFnc() -> innerFnc() -> 200 출력
+        document.write(num); // 500출력
+
+
+        //return문
+        function myFnc(num1, num2) {
+            document.write("num1 + num2 = ");
+            return num1 + num2;
+            document.write("==함수종료=="); //return문으로 실행되지 않음
+        }
+        var result = myFnc(100, 200);
+        document.write(result); //num1 + num2 = 300 cnffur
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
