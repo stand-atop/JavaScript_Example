@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>끝말잇기</title>
+</head>
+<body>
+    <script>
+        var word = '시계'
+        //while문
+        while(true){
+            var newWord = prompt(word)
+            if(word[word.length - 1] === newWord[0]){
+                //맞았을 때
+                word = newWord
+            } else {
+                //틀렸을 때
+                alert('끝말잇기야!')
+            }
+        }
+        //for문
+        for(;true;){
+            var newWord = prompt(word)
+            if(word[word.length - 1] === newWord[0]){
+                //맞았을 때
+                word = newWord
+            } else {
+                //틀렸을 때
+                alert('끝말잇기야!')
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문 별찍기</title>
+</head>
+<body>
+    <script>
+        //별찍기 1 -> 5 : 1씩 증가
+        for(var star = 1; star <= 5; star += 1){
+            document.write('*'.repeat(star)) //repeat()반복
+            document.write("<br/>")
+        }
+        document.write("<br/>")
+
+        //별찍기 5 -> 1 : 1씩 감소
+        for(var star = 5; star >= 1; star -= 1){
+            document.write('*'.repeat(star))
+            document.write("<br/>")
+        }
+        document.write("<br/>")
+
+        //별찍기 5 -> 1 : 1씩 감소/공백(_)
+        for(var star = 1; star <= 5; star += 1){
+            document.write("_".repeat(5 - star) + "*".repeat(star))
+            document.write("<br/>")
+        } 
+        document.write("<br/>")
+
+        //별찍기 중심
+        for(var star = 9; star >= 1; star -= 2){
+            document.write('_'.repeat((9 - star)/2) + "*".repeat(star))
+            document.write("<br/>")
+        }
+
+    </script>
+</body>
+</html>

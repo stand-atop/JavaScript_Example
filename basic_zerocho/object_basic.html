@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 기본</title>
+</head>
+<body>
+    <script>
+        //변수 초기화
+        var 이름 = '크롱'
+        var 나이 = '4'
+        var 키 = '70'
+        document.write(이름, 나이, 키)
+
+        //변수 값의 변경. 되돌릴 수 없음
+        var 이름 = '패티'
+        var 나이 = '5'
+        var 키 = '80'
+        document.write(이름, 나이, 키)
+
+        //객체
+        var 크롱 = {
+            이름 : '크롱',
+            나이 : '4',
+            키 : '70',
+        }
+        var 패티 = {
+            이름 : '패티',
+            나이 : '5',
+            키 : '80',
+        }
+        document.write(JSON.stringify(크롱))  
+        document.write(JSON.stringify(패티))
+
+        //메서드 = 함수가 들어있는 프로퍼티(속성)
+        /*
+        객체 = {
+            속성(프로퍼티) : 값,
+            속성(메서드) : 함수
+        }
+        */
+        var 크롱 = {
+            이름 : '크롱',
+            놀다 : function 놀다(){
+                document.write('소꿉놀이')
+            }
+        }
+        //크롱 속성 모두 출력
+        document.write(JSON.stringify(크롱))
+        
+        //크롱 속성 중 하나 출력
+        document.write(크롱['이름'])
+        
+        //크롱 속성 메소드 놀다() 출력 -실행
+        document.write(JSON.stringify(크롱.놀다()))
+        document.write(크롱.놀다())
+
+        //크롱 속성 메소드 놀다() 출력 -글자로
+        document.write(크롱['놀다'])
+
+    </script>
+
+</body>
+</html>
